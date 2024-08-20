@@ -49,10 +49,10 @@ namespace OwlEvan.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateProduct(int id, Product product)
         {
-            if (id != product.Id)
-            {
-                return BadRequest();
-            }
+            // if (id != product.Id)
+            // {
+            //     return BadRequest();
+            // }
 
             try
             {
