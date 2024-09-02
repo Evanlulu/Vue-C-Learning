@@ -1,6 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
 using OwlEvan.Models;
-using OwlEvan.Repositories;
 using OwlEvan.Repositories.Interfaces;
 
 namespace OwlEvan.Services;
@@ -19,7 +17,7 @@ public class ProductsService
         return await _productsRepository.GetAllAsync();
     }
 
-    public async Task<Product> GetProductByIdAsync(int id)
+    public async Task<Product?> GetProductByIdAsync(int id)
     {
         return await _productsRepository.GetByIdAsync(id);
     }
